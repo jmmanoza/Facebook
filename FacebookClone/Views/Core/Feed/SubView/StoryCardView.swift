@@ -9,18 +9,19 @@ import SwiftUI
 
 struct StoryFeedView: View {
     
-    var myProfilePicUrl: String = ""
-    var profilePicUrl: String = ""
-    var storyPicUrl: String = ""
-    var username: String = ""
+    @StateObject private var viewModel: FeedViewModel
+    
+    init(vm: FeedViewModel) {
+        _viewModel = StateObject(wrappedValue: vm)
+    }
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {
                 myStoryCardView
                 
-                ForEach(0..<10) { _ in
-                    mainView
+                ForEach(0..<viewModel.friends.count) { index in
+                    setUpMainView(feedVM: viewModel, index: index)
                 }
             }
         }
@@ -29,16 +30,16 @@ struct StoryFeedView: View {
 
 private extension StoryFeedView {
     @ViewBuilder
-    var mainView: some View {
+    func setUpMainView(feedVM: FeedViewModel, index: Int) -> some View {
         ZStack(alignment: .topLeading) {
-            Image(storyPicUrl)
+            Image(feedVM.friends[index].coverImageName ?? "")
                 .resizable()
                 .scaledToFill()
                 .frame(width: 100, height: 170)
                 .cornerRadius(16, corners: .allCorners)
             
             VStack(alignment: .leading) {
-                Image(profilePicUrl)
+                Image(feedVM.friends[index].profileImageName ?? "")
                     .resizable()
                     .scaledToFill()
                     .frame(width: 35, height: 35)
@@ -50,7 +51,7 @@ private extension StoryFeedView {
                 Spacer()
                     .frame(height: 90)
                 
-                Text(username)
+                Text("\(feedVM.friends[index].firstName) \(feedVM.friends[index].lastName)")
                     .foregroundColor(.white)
                     .font(.system(size: 12, weight: .bold))
             }
@@ -65,7 +66,7 @@ private extension StoryFeedView {
                 .foregroundColor(Color(.systemGray6))
                 .frame(width: 100, height: 170)
             
-            Image(myProfilePicUrl)
+            Image(viewModel.users[0].profileImageName ?? "")
                 .resizable()
                 .scaledToFill()
                 .frame(width: 100, height: 110)
@@ -99,6 +100,6 @@ private extension StoryFeedView {
 
 struct StoryCardView_Previews: PreviewProvider {
     static var previews: some View {
-        StoryFeedView()
+        StoryFeedView(vm: FeedViewModel())
     }
 }

@@ -24,7 +24,6 @@ class FriendsViewModel: ObservableObject {
     @Published var friendsRequests: [User] = []
     
     func setUpFriendsRequests() {
-        //print("patest: \(self.users.filter { self.users.fir.friendsRequestsIds.contains($0.id) })")
         self.friendsRequests = self.users.filter { self.users[0].friendsRequestsIds.contains($0.id) }
     }
 }

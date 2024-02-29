@@ -9,14 +9,19 @@ import SwiftUI
 
 struct ProfileView: View {
     
+    @StateObject private var viewModel: FeedViewModel
     @Environment(\.dismiss) private var dismiss
     var username: String = ""
+    
+    init(vm: FeedViewModel) {
+        _viewModel = StateObject(wrappedValue: vm)
+    }
     
     var body: some View {
         GeometryReader { proxy in
             ScrollView(showsIndicators: false) {
                 VStack {
-                    ProfileHeaderView(width: proxy.size.width)
+                    ProfileHeaderView(vm: viewModel, width: proxy.size.width)
                     
                     DividerView(width: proxy.size.width, height: 6)
                     
@@ -30,15 +35,9 @@ struct ProfileView: View {
                     
                     DividerView(width: proxy.size.width, height: 6)
                     
-                    ForEach(0..<2) { _ in
-                        PostView(myProfilePic: "profilePic",
-                                 myUsername: "Hello world",
-                                 date: "1 day",
-                                 postCaption: "Nice office",
-                                 postImageUrl: "office",
-                                 postLikeCount: "109",
-                                 postCommentCount: "87",
-                                 postShareCount: "40",
+                    ForEach(0..<viewModel.posts.count) { index in
+                        PostView(vm: viewModel,
+                                 index: index,
                                  isVideo: false)
                         
                         DividerView(width: proxy.size.width, height: 6)
@@ -74,6 +73,6 @@ struct ProfileView: View {
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        ProfileView(vm: FeedViewModel())
     }
 }

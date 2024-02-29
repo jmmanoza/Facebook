@@ -12,13 +12,21 @@ struct HeaderView: View {
     @Binding var isOpenProfile: Bool
     @Binding var isCreatePost: Bool
     
+    @StateObject private var viewModel: FeedViewModel
+    
+    init(vm: FeedViewModel, isOpenProfile: Binding<Bool>, isCreatePost: Binding<Bool>) {
+        self._viewModel = StateObject(wrappedValue: vm)
+        _isOpenProfile = isOpenProfile
+        _isCreatePost = isCreatePost
+    }
+    
     var body: some View {
         HStack {
 
             Button(action: {
                 isOpenProfile.toggle()
             }) {
-                Image("profilePic")
+                Image(viewModel.users[0].profileImageName ?? "")
                     .resizable()
                     .scaledToFill()
                     .clipShape(Circle())
@@ -59,6 +67,6 @@ struct HeaderView: View {
 
 struct HeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        HeaderView(isOpenProfile: .constant(false), isCreatePost: .constant(false))
+        HeaderView(vm: FeedViewModel(), isOpenProfile: .constant(false), isCreatePost: .constant(false))
     }
 }

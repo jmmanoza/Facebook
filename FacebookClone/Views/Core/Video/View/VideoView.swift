@@ -52,20 +52,21 @@ struct VideoView: View {
                         
                         Divider()
                         
-                        ForEach(0..<3) { _ in
-                            PostView(myProfilePic: "profilePic",
-                                     myUsername: "Hello world",
-                                     date: "1 day",
-                                     postCaption: "Nice office",
-                                     postImageUrl: "office",
-                                     postLikeCount: "109",
-                                     postCommentCount: "87",
-                                     postShareCount: "40",
-                                     isVideo: true,
-                                     videoURL: self.videoURL)
-                            
-                            DividerView(width: proxy.size.width, height: 6)
-                        }
+                        // TODO:
+//                        ForEach(0..<3) { _ in
+//                            PostView(myProfilePic: "profilePic",
+//                                     myUsername: "Hello world",
+//                                     date: "1 day",
+//                                     postCaption: "Nice office",
+//                                     postImageUrl: "office",
+//                                     postLikeCount: "109",
+//                                     postCommentCount: "87",
+//                                     postShareCount: "40",
+//                                     isVideo: true,
+//                                     videoURL: self.videoURL)
+//
+//                            DividerView(width: proxy.size.width, height: 6)
+//                        }
                     }
                 }
                 .toolbar {

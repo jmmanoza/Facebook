@@ -10,39 +10,49 @@ import AVKit
 
 struct PostView: View {
     
-    private var myProfilePic: String
-    private var myUsername: String
-    private var date: String
-    private var postCaption: String
-    private var postImageUrl: String
-    private var postLikeCount: String
-    private var postCommentCount: String
-    private var postShareCount: String
+    @StateObject private var viewModel: FeedViewModel
+    private var index: Int
     private var isVideo: Bool
+    
+//    private var myProfilePic: String
+//    private var myUsername: String
+//    private var date: String
+//    private var postCaption: String
+//    private var postImageUrl: String
+//    private var postLikeCount: String
+//    private var postCommentCount: String
+//    private var postShareCount: String
+//    private var isVideo: Bool
     private var videoURL: String? = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"
     private let facebookBlue: Color = Color(red: 26/255, green: 103/255, blue: 178/255)
     
-    init(myProfilePic: String,
-         myUsername: String,
-         date: String,
-         postCaption: String,
-         postImageUrl: String,
-         postLikeCount:String,
-         postCommentCount: String,
-         postShareCount: String,
-         isVideo: Bool,
-         videoURL: String? = nil) {
-        
-        self.myProfilePic = myProfilePic
-        self.myUsername = myUsername
-        self.date = date
-        self.postCaption = postCaption
-        self.postImageUrl = postImageUrl
-        self.postLikeCount = postLikeCount
-        self.postCommentCount = postCommentCount
-        self.postShareCount = postShareCount
+//    init(myProfilePic: String,
+//         myUsername: String,
+//         date: String,
+//         postCaption: String,
+//         postImageUrl: String,
+//         postLikeCount:String,
+//         postCommentCount: String,
+//         postShareCount: String,
+//         isVideo: Bool,
+//         videoURL: String? = nil) {
+//
+//        self.myProfilePic = myProfilePic
+//        self.myUsername = myUsername
+//        self.date = date
+//        self.postCaption = postCaption
+//        self.postImageUrl = postImageUrl
+//        self.postLikeCount = postLikeCount
+//        self.postCommentCount = postCommentCount
+//        self.postShareCount = postShareCount
+//        self.isVideo = isVideo
+//        self.videoURL = videoURL
+//    }
+    
+    init(vm: FeedViewModel, index: Int, isVideo: Bool) {
+        _viewModel = StateObject(wrappedValue: vm)
+        self.index = index
         self.isVideo = isVideo
-        self.videoURL = videoURL
     }
     
     var body: some View {
@@ -50,18 +60,18 @@ struct PostView: View {
             
             // Post Info
             HStack {
-                Image(myProfilePic)
+                Image(viewModel.posts[index].user?.profileImageName ?? "")
                     .resizable()
                     .scaledToFill()
                     .frame(width: 40, height: 40)
                     .clipShape(Circle())
                 
                 VStack(alignment: .leading) {
-                    Text(myUsername)
+                    Text("\(viewModel.posts[index].user?.firstName ?? "") \(viewModel.posts[index].user?.lastName ?? "")")
                         .font(.system(size: 14, weight: .semibold))
                     
                     HStack(alignment: .top, spacing: 3) {
-                        Text(date)
+                        Text("1 day")
                         Text("•")
                         Image(systemName: "globe")
                     }
@@ -89,16 +99,16 @@ struct PostView: View {
             .padding(.top, 5)
             
             // Post Content
-            Text(postCaption)
+            Text(viewModel.posts[index].postTitle)
                 .font(.system(size: 16))
                 .padding(.horizontal)
             
             if !(isVideo) {
-                Image(postImageUrl)
+                Image(viewModel.posts[index].postUrl)
                     .resizable()
                     .scaledToFill()
             } else {
-                if let url = URL(string: self.videoURL ?? "") {
+                if let url = URL(string: videoURL ?? "") {
                     VideoPlayer(player: AVPlayer(url: url))
                         .frame(height: 400)
                 }
@@ -109,13 +119,13 @@ struct PostView: View {
                 Image("like")
                     .resizable()
                     .frame(width: 18, height: 18)
-                Text(postLikeCount)
+                Text("\(viewModel.posts[index].postLikes)")
                 
                 Spacer()
                 
-                Text("\(postCommentCount) comments")
+                Text("\(viewModel.posts[index].postShares) comments")
                 Text("•")
-                Text("\(postShareCount) shares")
+                Text("\(viewModel.posts[index].postShares) shares")
             }
             .padding(.horizontal)
             .font(.system(size: 12))
@@ -159,6 +169,6 @@ struct PostView: View {
 
 struct PostView_Previews: PreviewProvider {
     static var previews: some View {
-        PostView(myProfilePic: "", myUsername: "", date: "", postCaption: "", postImageUrl: "", postLikeCount: "", postCommentCount: "", postShareCount: "", isVideo: false)
+        PostView(vm: FeedViewModel(), index: 0, isVideo: false)
     }
 }
