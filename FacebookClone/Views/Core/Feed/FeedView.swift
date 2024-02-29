@@ -9,6 +9,8 @@ import SwiftUI
 
 struct FeedView: View {
     
+    @StateObject private var viewModel = FeedViewModel()
+    
     @State var isOpenProfile: Bool = false
     @State var isCreatePost: Bool = false
     private let facebookBlue: Color = Color(red: 26/255, green: 103/255, blue: 178/255)
@@ -18,27 +20,19 @@ struct FeedView: View {
             GeometryReader { proxy in
                 ScrollView {
                     VStack {
-                        HeaderView(isOpenProfile: $isOpenProfile,
+                        HeaderView(vm: viewModel,
+                                   isOpenProfile: $isOpenProfile,
                                    isCreatePost: $isCreatePost)
                         
                         DividerView(width: proxy.size.width, height: 6)
                         
-                        StoryFeedView(myProfilePicUrl: "profilePic",
-                                      profilePicUrl: "profilePic1",
-                                      storyPicUrl: "Story1",
-                                      username: "Hello world.")
+                        StoryFeedView(vm: viewModel)
                         
                         DividerView(width: proxy.size.width, height: 6)
                         
-                        ForEach(0..<4) { _ in
-                            PostView(myProfilePic: "profilePic",
-                                     myUsername: "Hello world",
-                                     date: "1 day",
-                                     postCaption: "Nice office",
-                                     postImageUrl: "office",
-                                     postLikeCount: "109",
-                                     postCommentCount: "87",
-                                     postShareCount: "40",
+                        ForEach(0..<viewModel.posts.count) { index in
+                            PostView(vm: viewModel,
+                                     index: index,
                                      isVideo: false)
                             
                             DividerView(width: proxy.size.width, height: 6)
@@ -47,7 +41,7 @@ struct FeedView: View {
                         Spacer()
                         
                         NavigationLink(isActive: $isOpenProfile) {
-                            ProfileView()
+                            ProfileView(vm: viewModel)
                                 .navigationBarBackButtonHidden(true)
                         } label: {
                             EmptyView()
