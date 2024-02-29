@@ -1,0 +1,952 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E631F9F32B8EB88600AB6FBF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E631F9F22B8EB88600AB6FBF /* User.swift */; };
+		E631F9F52B8EB9CA00AB6FBF /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E631F9F42B8EB9CA00AB6FBF /* Post.swift */; };
+		E631F9F72B8EBAF500AB6FBF /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E631F9F62B8EBAF500AB6FBF /* Item.swift */; };
+		E631F9F92B8EBB7700AB6FBF /* MarketPlaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E631F9F82B8EBB7700AB6FBF /* MarketPlaceViewModel.swift */; };
+		E631F9FC2B8EC06B00AB6FBF /* FriendsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E631F9FB2B8EC06B00AB6FBF /* FriendsViewModel.swift */; };
+		E63A547E2B87243E006E5269 /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63A547D2B87243E006E5269 /* FriendsView.swift */; };
+		E63A54812B872D93006E5269 /* FriendRequestsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63A54802B872D93006E5269 /* FriendRequestsRowView.swift */; };
+		E645F9002B708FDB00E7BF75 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E645F8FF2B708FDB00E7BF75 /* RoundedCorner.swift */; };
+		E645F9052B7094BE00E7BF75 /* StoryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E645F9042B7094BE00E7BF75 /* StoryCardView.swift */; };
+		E64FA1C52B70B59F00786901 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64FA1C42B70B59F00786901 /* PostView.swift */; };
+		E655614B2B8C184D0047ED1E /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E655614A2B8C184D0047ED1E /* MenuView.swift */; };
+		E655614E2B8C204B0047ED1E /* MenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E655614D2B8C204B0047ED1E /* MenuHeaderView.swift */; };
+		E65561502B8C20E90047ED1E /* MenuShortcutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E655614F2B8C20E90047ED1E /* MenuShortcutView.swift */; };
+		E65561522B8C225B0047ED1E /* Shortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65561512B8C225B0047ED1E /* Shortcut.swift */; };
+		E65561542B8C3C610047ED1E /* CustomButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65561532B8C3C610047ED1E /* CustomButtonModifier.swift */; };
+		E65D27292B6F644C0002DE8C /* FacebookCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65D27282B6F644C0002DE8C /* FacebookCloneApp.swift */; };
+		E65D272D2B6F644E0002DE8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E65D272C2B6F644E0002DE8C /* Assets.xcassets */; };
+		E65D27302B6F644E0002DE8C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E65D272F2B6F644E0002DE8C /* Preview Assets.xcassets */; };
+		E65D273A2B6F644E0002DE8C /* FacebookCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65D27392B6F644E0002DE8C /* FacebookCloneTests.swift */; };
+		E65D27442B6F644E0002DE8C /* FacebookCloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65D27432B6F644E0002DE8C /* FacebookCloneUITests.swift */; };
+		E65D27462B6F644E0002DE8C /* FacebookCloneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65D27452B6F644E0002DE8C /* FacebookCloneUITestsLaunchTests.swift */; };
+		E65D27642B6F65B90002DE8C /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65D27632B6F65B90002DE8C /* MainTabBar.swift */; };
+		E65EBA022B7226EA002515D5 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65EBA012B7226EA002515D5 /* PrimaryButton.swift */; };
+		E65EBA052B722D17002515D5 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65EBA042B722D17002515D5 /* ProfileHeaderView.swift */; };
+		E65EBA072B722DB5002515D5 /* DividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65EBA062B722DB5002515D5 /* DividerView.swift */; };
+		E664B9292B772CA100D659DA /* ProfileOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E664B9282B772CA100D659DA /* ProfileOptionsView.swift */; };
+		E664B92B2B772FE200D659DA /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E664B92A2B772FE200D659DA /* View+Ext.swift */; };
+		E673059F2B7C71AA00BE00CA /* ManageProfilePostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E673059E2B7C71AA00BE00CA /* ManageProfilePostsView.swift */; };
+		E67721DD2B6F6ECA003DDB1A /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67721DC2B6F6ECA003DDB1A /* FeedView.swift */; };
+		E67721E02B6F75DF003DDB1A /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67721DF2B6F75DF003DDB1A /* ProfileView.swift */; };
+		E67721E22B6F775D003DDB1A /* CreatePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67721E12B6F775D003DDB1A /* CreatePostView.swift */; };
+		E67721E42B6F7864003DDB1A /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67721E32B6F7864003DDB1A /* HeaderView.swift */; };
+		E69CD56A2B8848230015D15F /* MarketPlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69CD5692B8848230015D15F /* MarketPlaceView.swift */; };
+		E69CD56D2B884FA60015D15F /* ProductItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69CD56C2B884FA60015D15F /* ProductItemView.swift */; };
+		E69F051A2B79C2C8000CAD9A /* ProfileFriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69F05192B79C2C8000CAD9A /* ProfileFriendsView.swift */; };
+		E6E258D92B8D88AB00ABE85F /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E258D82B8D88AB00ABE85F /* VideoView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E65D27362B6F644E0002DE8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E65D271D2B6F644C0002DE8C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E65D27242B6F644C0002DE8C;
+			remoteInfo = FacebookClone;
+		};
+		E65D27402B6F644E0002DE8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E65D271D2B6F644C0002DE8C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E65D27242B6F644C0002DE8C;
+			remoteInfo = FacebookClone;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E631F9F22B8EB88600AB6FBF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E631F9F42B8EB9CA00AB6FBF /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		E631F9F62B8EBAF500AB6FBF /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		E631F9F82B8EBB7700AB6FBF /* MarketPlaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketPlaceViewModel.swift; sourceTree = "<group>"; };
+		E631F9FB2B8EC06B00AB6FBF /* FriendsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewModel.swift; sourceTree = "<group>"; };
+		E63A547D2B87243E006E5269 /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
+		E63A54802B872D93006E5269 /* FriendRequestsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRequestsRowView.swift; sourceTree = "<group>"; };
+		E645F8FF2B708FDB00E7BF75 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
+		E645F9042B7094BE00E7BF75 /* StoryCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCardView.swift; sourceTree = "<group>"; };
+		E64FA1C42B70B59F00786901 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		E655614A2B8C184D0047ED1E /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		E655614D2B8C204B0047ED1E /* MenuHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHeaderView.swift; sourceTree = "<group>"; };
+		E655614F2B8C20E90047ED1E /* MenuShortcutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuShortcutView.swift; sourceTree = "<group>"; };
+		E65561512B8C225B0047ED1E /* Shortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shortcut.swift; sourceTree = "<group>"; };
+		E65561532B8C3C610047ED1E /* CustomButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonModifier.swift; sourceTree = "<group>"; };
+		E65D27252B6F644C0002DE8C /* FacebookClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FacebookClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E65D27282B6F644C0002DE8C /* FacebookCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookCloneApp.swift; sourceTree = "<group>"; };
+		E65D272C2B6F644E0002DE8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E65D272F2B6F644E0002DE8C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E65D27352B6F644E0002DE8C /* FacebookCloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FacebookCloneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E65D27392B6F644E0002DE8C /* FacebookCloneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookCloneTests.swift; sourceTree = "<group>"; };
+		E65D273F2B6F644E0002DE8C /* FacebookCloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FacebookCloneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E65D27432B6F644E0002DE8C /* FacebookCloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookCloneUITests.swift; sourceTree = "<group>"; };
+		E65D27452B6F644E0002DE8C /* FacebookCloneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookCloneUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E65D27632B6F65B90002DE8C /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
+		E65EBA012B7226EA002515D5 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		E65EBA042B722D17002515D5 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		E65EBA062B722DB5002515D5 /* DividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerView.swift; sourceTree = "<group>"; };
+		E664B9282B772CA100D659DA /* ProfileOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOptionsView.swift; sourceTree = "<group>"; };
+		E664B92A2B772FE200D659DA /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
+		E673059E2B7C71AA00BE00CA /* ManageProfilePostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageProfilePostsView.swift; sourceTree = "<group>"; };
+		E67721DC2B6F6ECA003DDB1A /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		E67721DF2B6F75DF003DDB1A /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		E67721E12B6F775D003DDB1A /* CreatePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostView.swift; sourceTree = "<group>"; };
+		E67721E32B6F7864003DDB1A /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		E69CD5692B8848230015D15F /* MarketPlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketPlaceView.swift; sourceTree = "<group>"; };
+		E69CD56C2B884FA60015D15F /* ProductItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemView.swift; sourceTree = "<group>"; };
+		E69F05192B79C2C8000CAD9A /* ProfileFriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFriendsView.swift; sourceTree = "<group>"; };
+		E6E258D82B8D88AB00ABE85F /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		E6E258DA2B8D95FE00ABE85F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E65D27222B6F644C0002DE8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E65D27322B6F644E0002DE8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E65D273C2B6F644E0002DE8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E631F9F12B8EB86000AB6FBF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E631F9F82B8EBB7700AB6FBF /* MarketPlaceViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E631F9FA2B8EC05D00AB6FBF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E631F9FB2B8EC06B00AB6FBF /* FriendsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E63A547F2B872D77006E5269 /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				E63A54802B872D93006E5269 /* FriendRequestsRowView.swift */,
+			);
+			path = SubView;
+			sourceTree = "<group>";
+		};
+		E645F8FE2B708FA600E7BF75 /* View+Ext */ = {
+			isa = PBXGroup;
+			children = (
+				E664B92A2B772FE200D659DA /* View+Ext.swift */,
+			);
+			path = "View+Ext";
+			sourceTree = "<group>";
+		};
+		E645F9012B70924000E7BF75 /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				E67721E32B6F7864003DDB1A /* HeaderView.swift */,
+				E645F9042B7094BE00E7BF75 /* StoryCardView.swift */,
+			);
+			path = SubView;
+			sourceTree = "<group>";
+		};
+		E65561492B8C18340047ED1E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E655614A2B8C184D0047ED1E /* MenuView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E655614C2B8C203A0047ED1E /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				E65561512B8C225B0047ED1E /* Shortcut.swift */,
+				E655614D2B8C204B0047ED1E /* MenuHeaderView.swift */,
+				E655614F2B8C20E90047ED1E /* MenuShortcutView.swift */,
+			);
+			path = SubView;
+			sourceTree = "<group>";
+		};
+		E65D271C2B6F644C0002DE8C = {
+			isa = PBXGroup;
+			children = (
+				E65D27272B6F644C0002DE8C /* FacebookClone */,
+				E65D27382B6F644E0002DE8C /* FacebookCloneTests */,
+				E65D27422B6F644E0002DE8C /* FacebookCloneUITests */,
+				E65D27262B6F644C0002DE8C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E65D27262B6F644C0002DE8C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E65D27252B6F644C0002DE8C /* FacebookClone.app */,
+				E65D27352B6F644E0002DE8C /* FacebookCloneTests.xctest */,
+				E65D273F2B6F644E0002DE8C /* FacebookCloneUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E65D27272B6F644C0002DE8C /* FacebookClone */ = {
+			isa = PBXGroup;
+			children = (
+				E6E258DA2B8D95FE00ABE85F /* Info.plist */,
+				E65D27522B6F647C0002DE8C /* App */,
+				E65D27532B6F64820002DE8C /* Service */,
+				E65D27542B6F64C20002DE8C /* Model */,
+				E65D27552B6F64C70002DE8C /* Views */,
+				E65D27562B6F64CE0002DE8C /* Supporting Files */,
+				E65D272E2B6F644E0002DE8C /* Preview Content */,
+			);
+			path = FacebookClone;
+			sourceTree = "<group>";
+		};
+		E65D272E2B6F644E0002DE8C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E65D272F2B6F644E0002DE8C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E65D27382B6F644E0002DE8C /* FacebookCloneTests */ = {
+			isa = PBXGroup;
+			children = (
+				E65D27392B6F644E0002DE8C /* FacebookCloneTests.swift */,
+			);
+			path = FacebookCloneTests;
+			sourceTree = "<group>";
+		};
+		E65D27422B6F644E0002DE8C /* FacebookCloneUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E65D27432B6F644E0002DE8C /* FacebookCloneUITests.swift */,
+				E65D27452B6F644E0002DE8C /* FacebookCloneUITestsLaunchTests.swift */,
+			);
+			path = FacebookCloneUITests;
+			sourceTree = "<group>";
+		};
+		E65D27522B6F647C0002DE8C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E65D27282B6F644C0002DE8C /* FacebookCloneApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E65D27532B6F64820002DE8C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E65D27542B6F64C20002DE8C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E631F9F22B8EB88600AB6FBF /* User.swift */,
+				E631F9F42B8EB9CA00AB6FBF /* Post.swift */,
+				E631F9F62B8EBAF500AB6FBF /* Item.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E65D27552B6F64C70002DE8C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E65D27572B6F64E40002DE8C /* Core */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E65D27562B6F64CE0002DE8C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E645F8FE2B708FA600E7BF75 /* View+Ext */,
+				E65D272C2B6F644E0002DE8C /* Assets.xcassets */,
+				E645F8FF2B708FDB00E7BF75 /* RoundedCorner.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E65D27572B6F64E40002DE8C /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E65D27582B6F65090002DE8C /* Authentication */,
+				E65D27592B6F65130002DE8C /* Components */,
+				E65D275A2B6F651F0002DE8C /* Create Post */,
+				E65D275B2B6F65260002DE8C /* Feed */,
+				E65D275C2B6F65300002DE8C /* Friends */,
+				E65D275D2B6F65380002DE8C /* Marketplace */,
+				E65D275E2B6F65430002DE8C /* Menu */,
+				E65D275F2B6F654B0002DE8C /* Profile */,
+				E65D27602B6F65540002DE8C /* Root */,
+				E65D27622B6F657C0002DE8C /* Tabbar */,
+				E65D27612B6F65620002DE8C /* Video */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		E65D27582B6F65090002DE8C /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		E65D27592B6F65130002DE8C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E65EBA062B722DB5002515D5 /* DividerView.swift */,
+				E64FA1C42B70B59F00786901 /* PostView.swift */,
+				E65EBA012B7226EA002515D5 /* PrimaryButton.swift */,
+				E65561532B8C3C610047ED1E /* CustomButtonModifier.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E65D275A2B6F651F0002DE8C /* Create Post */ = {
+			isa = PBXGroup;
+			children = (
+				E67721E12B6F775D003DDB1A /* CreatePostView.swift */,
+			);
+			path = "Create Post";
+			sourceTree = "<group>";
+		};
+		E65D275B2B6F65260002DE8C /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				E645F9012B70924000E7BF75 /* SubView */,
+				E67721DC2B6F6ECA003DDB1A /* FeedView.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		E65D275C2B6F65300002DE8C /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				E63A547F2B872D77006E5269 /* SubView */,
+				E631F9FA2B8EC05D00AB6FBF /* ViewModel */,
+				E664B9272B772C9500D659DA /* View */,
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
+		E65D275D2B6F65380002DE8C /* Marketplace */ = {
+			isa = PBXGroup;
+			children = (
+				E631F9F12B8EB86000AB6FBF /* ViewModel */,
+				E69CD56B2B884F950015D15F /* SubView */,
+				E69CD5692B8848230015D15F /* MarketPlaceView.swift */,
+			);
+			path = Marketplace;
+			sourceTree = "<group>";
+		};
+		E65D275E2B6F65430002DE8C /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				E655614C2B8C203A0047ED1E /* SubView */,
+				E65561492B8C18340047ED1E /* View */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		E65D275F2B6F654B0002DE8C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				E65EBA032B722D0A002515D5 /* SubView */,
+				E67721DF2B6F75DF003DDB1A /* ProfileView.swift */,
+				E69F05192B79C2C8000CAD9A /* ProfileFriendsView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		E65D27602B6F65540002DE8C /* Root */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		E65D27612B6F65620002DE8C /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				E6E258D72B8D889500ABE85F /* View */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		E65D27622B6F657C0002DE8C /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				E65D27632B6F65B90002DE8C /* MainTabBar.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		E65EBA032B722D0A002515D5 /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				E664B9282B772CA100D659DA /* ProfileOptionsView.swift */,
+				E65EBA042B722D17002515D5 /* ProfileHeaderView.swift */,
+				E673059E2B7C71AA00BE00CA /* ManageProfilePostsView.swift */,
+			);
+			path = SubView;
+			sourceTree = "<group>";
+		};
+		E664B9272B772C9500D659DA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E63A547D2B87243E006E5269 /* FriendsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E69CD56B2B884F950015D15F /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				E69CD56C2B884FA60015D15F /* ProductItemView.swift */,
+			);
+			path = SubView;
+			sourceTree = "<group>";
+		};
+		E6E258D72B8D889500ABE85F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E6E258D82B8D88AB00ABE85F /* VideoView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E65D27242B6F644C0002DE8C /* FacebookClone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E65D27492B6F644E0002DE8C /* Build configuration list for PBXNativeTarget "FacebookClone" */;
+			buildPhases = (
+				E65D27212B6F644C0002DE8C /* Sources */,
+				E65D27222B6F644C0002DE8C /* Frameworks */,
+				E65D27232B6F644C0002DE8C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FacebookClone;
+			productName = FacebookClone;
+			productReference = E65D27252B6F644C0002DE8C /* FacebookClone.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E65D27342B6F644E0002DE8C /* FacebookCloneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E65D274C2B6F644E0002DE8C /* Build configuration list for PBXNativeTarget "FacebookCloneTests" */;
+			buildPhases = (
+				E65D27312B6F644E0002DE8C /* Sources */,
+				E65D27322B6F644E0002DE8C /* Frameworks */,
+				E65D27332B6F644E0002DE8C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E65D27372B6F644E0002DE8C /* PBXTargetDependency */,
+			);
+			name = FacebookCloneTests;
+			productName = FacebookCloneTests;
+			productReference = E65D27352B6F644E0002DE8C /* FacebookCloneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E65D273E2B6F644E0002DE8C /* FacebookCloneUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E65D274F2B6F644E0002DE8C /* Build configuration list for PBXNativeTarget "FacebookCloneUITests" */;
+			buildPhases = (
+				E65D273B2B6F644E0002DE8C /* Sources */,
+				E65D273C2B6F644E0002DE8C /* Frameworks */,
+				E65D273D2B6F644E0002DE8C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E65D27412B6F644E0002DE8C /* PBXTargetDependency */,
+			);
+			name = FacebookCloneUITests;
+			productName = FacebookCloneUITests;
+			productReference = E65D273F2B6F644E0002DE8C /* FacebookCloneUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E65D271D2B6F644C0002DE8C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					E65D27242B6F644C0002DE8C = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					E65D27342B6F644E0002DE8C = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = E65D27242B6F644C0002DE8C;
+					};
+					E65D273E2B6F644E0002DE8C = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = E65D27242B6F644C0002DE8C;
+					};
+				};
+			};
+			buildConfigurationList = E65D27202B6F644C0002DE8C /* Build configuration list for PBXProject "FacebookClone" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E65D271C2B6F644C0002DE8C;
+			productRefGroup = E65D27262B6F644C0002DE8C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E65D27242B6F644C0002DE8C /* FacebookClone */,
+				E65D27342B6F644E0002DE8C /* FacebookCloneTests */,
+				E65D273E2B6F644E0002DE8C /* FacebookCloneUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E65D27232B6F644C0002DE8C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E65D27302B6F644E0002DE8C /* Preview Assets.xcassets in Resources */,
+				E65D272D2B6F644E0002DE8C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E65D27332B6F644E0002DE8C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E65D273D2B6F644E0002DE8C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E65D27212B6F644C0002DE8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E67721E22B6F775D003DDB1A /* CreatePostView.swift in Sources */,
+				E664B9292B772CA100D659DA /* ProfileOptionsView.swift in Sources */,
+				E664B92B2B772FE200D659DA /* View+Ext.swift in Sources */,
+				E67721E42B6F7864003DDB1A /* HeaderView.swift in Sources */,
+				E65EBA052B722D17002515D5 /* ProfileHeaderView.swift in Sources */,
+				E631F9FC2B8EC06B00AB6FBF /* FriendsViewModel.swift in Sources */,
+				E631F9F32B8EB88600AB6FBF /* User.swift in Sources */,
+				E65561522B8C225B0047ED1E /* Shortcut.swift in Sources */,
+				E67721E02B6F75DF003DDB1A /* ProfileView.swift in Sources */,
+				E65D27642B6F65B90002DE8C /* MainTabBar.swift in Sources */,
+				E655614B2B8C184D0047ED1E /* MenuView.swift in Sources */,
+				E65561542B8C3C610047ED1E /* CustomButtonModifier.swift in Sources */,
+				E645F9052B7094BE00E7BF75 /* StoryCardView.swift in Sources */,
+				E67721DD2B6F6ECA003DDB1A /* FeedView.swift in Sources */,
+				E6E258D92B8D88AB00ABE85F /* VideoView.swift in Sources */,
+				E63A547E2B87243E006E5269 /* FriendsView.swift in Sources */,
+				E65D27292B6F644C0002DE8C /* FacebookCloneApp.swift in Sources */,
+				E69F051A2B79C2C8000CAD9A /* ProfileFriendsView.swift in Sources */,
+				E65561502B8C20E90047ED1E /* MenuShortcutView.swift in Sources */,
+				E64FA1C52B70B59F00786901 /* PostView.swift in Sources */,
+				E631F9F52B8EB9CA00AB6FBF /* Post.swift in Sources */,
+				E69CD56A2B8848230015D15F /* MarketPlaceView.swift in Sources */,
+				E673059F2B7C71AA00BE00CA /* ManageProfilePostsView.swift in Sources */,
+				E69CD56D2B884FA60015D15F /* ProductItemView.swift in Sources */,
+				E645F9002B708FDB00E7BF75 /* RoundedCorner.swift in Sources */,
+				E631F9F92B8EBB7700AB6FBF /* MarketPlaceViewModel.swift in Sources */,
+				E65EBA072B722DB5002515D5 /* DividerView.swift in Sources */,
+				E65EBA022B7226EA002515D5 /* PrimaryButton.swift in Sources */,
+				E655614E2B8C204B0047ED1E /* MenuHeaderView.swift in Sources */,
+				E63A54812B872D93006E5269 /* FriendRequestsRowView.swift in Sources */,
+				E631F9F72B8EBAF500AB6FBF /* Item.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E65D27312B6F644E0002DE8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E65D273A2B6F644E0002DE8C /* FacebookCloneTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E65D273B2B6F644E0002DE8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E65D27462B6F644E0002DE8C /* FacebookCloneUITestsLaunchTests.swift in Sources */,
+				E65D27442B6F644E0002DE8C /* FacebookCloneUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E65D27372B6F644E0002DE8C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E65D27242B6F644C0002DE8C /* FacebookClone */;
+			targetProxy = E65D27362B6F644E0002DE8C /* PBXContainerItemProxy */;
+		};
+		E65D27412B6F644E0002DE8C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E65D27242B6F644C0002DE8C /* FacebookClone */;
+			targetProxy = E65D27402B6F644E0002DE8C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E65D27472B6F644E0002DE8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E65D27482B6F644E0002DE8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E65D274A2B6F644E0002DE8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FacebookClone/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FacebookClone/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.mikko.manoza.FacebookClone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		E65D274B2B6F644E0002DE8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FacebookClone/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FacebookClone/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.mikko.manoza.FacebookClone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		E65D274D2B6F644E0002DE8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.mikko.manoza.FacebookCloneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FacebookClone.app/FacebookClone";
+			};
+			name = Debug;
+		};
+		E65D274E2B6F644E0002DE8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.mikko.manoza.FacebookCloneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FacebookClone.app/FacebookClone";
+			};
+			name = Release;
+		};
+		E65D27502B6F644E0002DE8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.mikko.manoza.FacebookCloneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FacebookClone;
+			};
+			name = Debug;
+		};
+		E65D27512B6F644E0002DE8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.mikko.manoza.FacebookCloneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FacebookClone;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E65D27202B6F644C0002DE8C /* Build configuration list for PBXProject "FacebookClone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E65D27472B6F644E0002DE8C /* Debug */,
+				E65D27482B6F644E0002DE8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E65D27492B6F644E0002DE8C /* Build configuration list for PBXNativeTarget "FacebookClone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E65D274A2B6F644E0002DE8C /* Debug */,
+				E65D274B2B6F644E0002DE8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E65D274C2B6F644E0002DE8C /* Build configuration list for PBXNativeTarget "FacebookCloneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E65D274D2B6F644E0002DE8C /* Debug */,
+				E65D274E2B6F644E0002DE8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E65D274F2B6F644E0002DE8C /* Build configuration list for PBXNativeTarget "FacebookCloneUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E65D27502B6F644E0002DE8C /* Debug */,
+				E65D27512B6F644E0002DE8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E65D271D2B6F644C0002DE8C /* Project object */;
+}
