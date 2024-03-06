@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import UIKit
+import SwiftUI
 
 class FeedViewModel: ObservableObject {
     
@@ -35,6 +37,19 @@ class FeedViewModel: ObservableObject {
         .init(id: "1", userId: "0", postTitle: "You never walk alone", postLikes: 101, postShares: 45, postUrl: "stadium", isVideo: false)
     ]
     
+    @Published var myPostIndexes: [Int] = []
+    @Published var selectedImage: UIImage?
+    @Published var selectedCoverImage: UIImage?
+    @Published var profileImage: Image = Image("no_profile")
+    @Published var coverImage: Image = Image("no_cover")
+    
+    // for ios 16 up
+//    @Published var selectedImage: PhotosPickerItem? {
+//        didSet {
+//            Task { try await loadImage(fromItem: selectedImage!)}
+//        }
+//    }
+    
     init() {
         setUpFriends()
         setUpPost()
@@ -47,6 +62,27 @@ class FeedViewModel: ObservableObject {
     private func setUpPost() {
         for i in 0..<posts.count {
             posts[i].user = users.first(where: {$0.id == posts[i].userId})
+            
+            if posts[i].user == users[0] {
+                myPostIndexes.append(i)
+            }
         }
+    }
+    
+    // for ios 16 up
+//    @MainActor
+//    func loadImage(fromItem item: PhotoPickerItem) async throws {
+//        guard let item = item else { return }
+//        guard let data = try? await item.loadTransferable(type: Data.self) else { return }
+//        guard let uiImage = UIimage(data: data) else { return }
+//        self.uiImage = uiImage
+//    }
+    
+    func pickedImage(imageItem: UIImage) {
+        self.profileImage = Image(uiImage: imageItem)
+    }
+    
+    func pickedCoverImage(coverImage: UIImage) {
+        self.coverImage = Image(uiImage: coverImage)
     }
 }
