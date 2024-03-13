@@ -45,6 +45,9 @@
 		E69F051A2B79C2C8000CAD9A /* ProfileFriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69F05192B79C2C8000CAD9A /* ProfileFriendsView.swift */; };
 		E6E258D92B8D88AB00ABE85F /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E258D82B8D88AB00ABE85F /* VideoView.swift */; };
 		E6EF8E452B90D1D30091D8DF /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EF8E442B90D1D30091D8DF /* FeedViewModel.swift */; };
+		E6F721EB2BA1762B002E67F3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F721EA2BA1762B002E67F3 /* LoginView.swift */; };
+		E6F721ED2BA1775A002E67F3 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F721EC2BA1775A002E67F3 /* LoginViewModel.swift */; };
+		E6F721EF2BA178B1002E67F3 /* PrimaryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F721EE2BA178B1002E67F3 /* PrimaryTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +110,9 @@
 		E6E258D82B8D88AB00ABE85F /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		E6E258DA2B8D95FE00ABE85F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E6EF8E442B90D1D30091D8DF /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		E6F721EA2BA1762B002E67F3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		E6F721EC2BA1775A002E67F3 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		E6F721EE2BA178B1002E67F3 /* PrimaryTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,6 +322,8 @@
 		E65D27582B6F65090002DE8C /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				E6F721E92BA17619002E67F3 /* View */,
+				E6F721E82BA17611002E67F3 /* ViewModel */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -328,6 +336,7 @@
 				E65EBA012B7226EA002515D5 /* PrimaryButton.swift */,
 				E65561532B8C3C610047ED1E /* CustomButtonModifier.swift */,
 				E69059F12B98064700E2E1FD /* ImagePicker.swift */,
+				E6F721EE2BA178B1002E67F3 /* PrimaryTextField.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -452,6 +461,22 @@
 				E6EF8E442B90D1D30091D8DF /* FeedViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E6F721E82BA17611002E67F3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E6F721EC2BA1775A002E67F3 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E6F721E92BA17619002E67F3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E6F721EA2BA1762B002E67F3 /* LoginView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -590,12 +615,15 @@
 				E67721E42B6F7864003DDB1A /* HeaderView.swift in Sources */,
 				E65EBA052B722D17002515D5 /* ProfileHeaderView.swift in Sources */,
 				E631F9FC2B8EC06B00AB6FBF /* FriendsViewModel.swift in Sources */,
+				E6F721EF2BA178B1002E67F3 /* PrimaryTextField.swift in Sources */,
 				E631F9F32B8EB88600AB6FBF /* User.swift in Sources */,
 				E65561522B8C225B0047ED1E /* Shortcut.swift in Sources */,
 				E67721E02B6F75DF003DDB1A /* ProfileView.swift in Sources */,
 				E65D27642B6F65B90002DE8C /* MainTabBar.swift in Sources */,
+				E6F721EB2BA1762B002E67F3 /* LoginView.swift in Sources */,
 				E655614B2B8C184D0047ED1E /* MenuView.swift in Sources */,
 				E65561542B8C3C610047ED1E /* CustomButtonModifier.swift in Sources */,
+				E6F721ED2BA1775A002E67F3 /* LoginViewModel.swift in Sources */,
 				E645F9052B7094BE00E7BF75 /* StoryCardView.swift in Sources */,
 				E67721DD2B6F6ECA003DDB1A /* FeedView.swift in Sources */,
 				E6EF8E452B90D1D30091D8DF /* FeedViewModel.swift in Sources */,
