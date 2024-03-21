@@ -12,8 +12,7 @@ struct LoginView: View {
     @StateObject private var loginVM = LoginViewModel()
     
     var body: some View {
-        NavigationView {
-            
+        NavigationStack {
             GeometryReader { proxy in
                 VStack(spacing: 70) {
                     Spacer()
@@ -57,7 +56,11 @@ struct LoginView: View {
                     HStack { Spacer() }
                     
                     VStack(spacing: 24) {
-                        Button(action: {}) {
+                        
+                        NavigationLink {
+                            AddNameView()
+                                .navigationBarBackButtonHidden()
+                        } label: {
                             Text("Create new account")
                                 .font(.headline)
                                 .fontWeight(.semibold)
@@ -68,7 +71,7 @@ struct LoginView: View {
                                                 lineWidth: 1)
                                 }
                         }
-                        
+
                         HStack(spacing: 5) {
                             Image("meta")
                                 .resizable()

@@ -14,6 +14,8 @@
 		E631F9FC2B8EC06B00AB6FBF /* FriendsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E631F9FB2B8EC06B00AB6FBF /* FriendsViewModel.swift */; };
 		E63A547E2B87243E006E5269 /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63A547D2B87243E006E5269 /* FriendsView.swift */; };
 		E63A54812B872D93006E5269 /* FriendRequestsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63A54802B872D93006E5269 /* FriendRequestsRowView.swift */; };
+		E644FDC92BAC593B000C9310 /* AddNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E644FDC82BAC593B000C9310 /* AddNameView.swift */; };
+		E644FDCB2BAC5D79000C9310 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E644FDCA2BAC5D79000C9310 /* RegistrationViewModel.swift */; };
 		E645F9002B708FDB00E7BF75 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E645F8FF2B708FDB00E7BF75 /* RoundedCorner.swift */; };
 		E645F9052B7094BE00E7BF75 /* StoryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E645F9042B7094BE00E7BF75 /* StoryCardView.swift */; };
 		E64FA1C52B70B59F00786901 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64FA1C42B70B59F00786901 /* PostView.swift */; };
@@ -75,6 +77,8 @@
 		E631F9FB2B8EC06B00AB6FBF /* FriendsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewModel.swift; sourceTree = "<group>"; };
 		E63A547D2B87243E006E5269 /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
 		E63A54802B872D93006E5269 /* FriendRequestsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRequestsRowView.swift; sourceTree = "<group>"; };
+		E644FDC82BAC593B000C9310 /* AddNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNameView.swift; sourceTree = "<group>"; };
+		E644FDCA2BAC5D79000C9310 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		E645F8FF2B708FDB00E7BF75 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
 		E645F9042B7094BE00E7BF75 /* StoryCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCardView.swift; sourceTree = "<group>"; };
 		E64FA1C42B70B59F00786901 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
@@ -467,6 +471,7 @@
 			isa = PBXGroup;
 			children = (
 				E6F721EC2BA1775A002E67F3 /* LoginViewModel.swift */,
+				E644FDCA2BAC5D79000C9310 /* RegistrationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -475,6 +480,7 @@
 			isa = PBXGroup;
 			children = (
 				E6F721EA2BA1762B002E67F3 /* LoginView.swift */,
+				E644FDC82BAC593B000C9310 /* AddNameView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -612,6 +618,7 @@
 				E67721E22B6F775D003DDB1A /* CreatePostView.swift in Sources */,
 				E664B9292B772CA100D659DA /* ProfileOptionsView.swift in Sources */,
 				E664B92B2B772FE200D659DA /* View+Ext.swift in Sources */,
+				E644FDCB2BAC5D79000C9310 /* RegistrationViewModel.swift in Sources */,
 				E67721E42B6F7864003DDB1A /* HeaderView.swift in Sources */,
 				E65EBA052B722D17002515D5 /* ProfileHeaderView.swift in Sources */,
 				E631F9FC2B8EC06B00AB6FBF /* FriendsViewModel.swift in Sources */,
@@ -626,6 +633,7 @@
 				E6F721ED2BA1775A002E67F3 /* LoginViewModel.swift in Sources */,
 				E645F9052B7094BE00E7BF75 /* StoryCardView.swift in Sources */,
 				E67721DD2B6F6ECA003DDB1A /* FeedView.swift in Sources */,
+				E644FDC92BAC593B000C9310 /* AddNameView.swift in Sources */,
 				E6EF8E452B90D1D30091D8DF /* FeedViewModel.swift in Sources */,
 				E6E258D92B8D88AB00ABE85F /* VideoView.swift in Sources */,
 				E63A547E2B87243E006E5269 /* FriendsView.swift in Sources */,
@@ -814,7 +822,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -845,7 +853,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
